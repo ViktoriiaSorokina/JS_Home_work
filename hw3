@@ -1,0 +1,60 @@
+var result = 'number' + 3 + 3;
+console.log(result) // number33 все сприймає як срінгу
+
+var result1 = null + 3;
+console.log(result1) // 3 null конвертується до 0 
+
+
+var result2 = 5 && "qwerty";
+console.log(result2) // qwerty - оператор і повертає останнє значення true
+
+
+var result3 = +'40' + +'2' + "hillel";
+console.log(result3) // 42hillel - працює механізм конкотинаціі'
+
+
+var result4 = '10' - 5 === 6;
+console.log(result4) // false строга рівність 5 не дорівнює 6
+
+
+var result5 = true + false;
+console.log(result5) // 1 - true is 1, and false is 0
+
+var result6 = '4px' - 3;
+console.log(result6) //NaN математичні дії з стрінгою 
+
+var result7 = '4' - 3;
+console.log(result7) // 1 // Js завжди намагається привести все до числа.
+
+var result8 = '6' + 3 ** 0;
+console.log(result8) // 61 - працює механізм конкотинації 
+
+var result9 = 12 / '6'
+console.log(result9); //2 - Js завжди намагається привести все до числа.
+
+var result10 = '10' +(5 === 6);
+console.log(result10) //10false - працює механізм конкатинації 
+
+var result11 = null == '';
+console.log(result11); // false
+
+var result12 = 3 ** (9 / 3);
+console.log(result12); //27 - виконується спершу дія в дужках і потів зведення в 3ю ступінь 
+
+var result13 = !!'false' == !!'true';
+console.log (result13); //true
+
+var result = 0 || '0' && 1;
+console.log(result); //1 - повертає останнє значення тру 
+
+var result = (+null == false) < 1;
+console.log(result) //false - +null==false is true so the result is false
+
+var result = false && true || true;
+console.log(result) //true - returned true after &&
+
+var result = false && (false || true);
+console.log(result) //false -first step we compare (false || true) and get true than compare False &&True and got false
+
+var result = (+null == false) < 1 ** 5;
+console.log(result) //false - we compare true<1 and this is false
